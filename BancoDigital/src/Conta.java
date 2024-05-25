@@ -1,7 +1,7 @@
 public abstract  class Conta implements InterfaceConta {
 
-	private static final String AGENCIA_PADRAO = "001";
-	private static int SEQUENCIAL = 1;
+	private static final String Agencia = "009";
+	private static int inicial = 1;
 
 	protected String agencia;
 	protected int numero;
@@ -10,15 +10,20 @@ public abstract  class Conta implements InterfaceConta {
 	protected String type;
 
 	public Conta(Cliente cliente, String type) {
-		this.agencia = Conta.AGENCIA_PADRAO;
-		this.numero = SEQUENCIAL++;
+		this.agencia = Conta.Agencia;
+		this.numero = inicial++;
 		this.cliente = cliente;
 		this.type = type;
 	}
 
 	@Override
 	public void sacar(double valor) {
-		saldo -= valor;
+		if (saldo >= valor) {
+            saldo -= valor;
+            System.out.println("Saque feito.");
+        } else {
+            System.out.println("Saldo insuficiente. Saque não realizado.");
+        }
 	}
 
 	@Override
@@ -57,7 +62,7 @@ public abstract  class Conta implements InterfaceConta {
 	}
 
 	protected void listarContas() {
-		System.out.printf("Titular: %s | Tipo de Conta: %s | Agencia: %s | Mumero da Conta: %d\n", this.cliente.getNome(), this.getType(), this.getAgencia(), this.getNumero());
+		System.out.printf( this.cliente.getNome(), this.getType(), this.getAgencia(), this.getNumero());
 	}
 
 }
