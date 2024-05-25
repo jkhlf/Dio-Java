@@ -24,3 +24,4 @@ hs_err_pid*
 replay_pid*
 ContaBanco/.vscode/settings.json
 ContaBanco/.vscode/launch.json
+StreamAPI/.vscode/settings.json
