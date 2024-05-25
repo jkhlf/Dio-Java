@@ -42,11 +42,11 @@ public class Main {
 
         System.out.println("");
         Certificado certificadoJava = new Certificado();
-        certificadoJava.gerarCertificado("OOP Java", devCamila.getNome(), "2015-11-06", "GSJKCS");
+        certificadoJava.gerarCertificado("Java Expert", devCamila.getNome(), "2024-11-09", "JSPTRS");
         certificadoJava.exebirCertficados();
 
         System.out.println("");
-        Professor sauloDaMata = new Professor("Saulo da Mata", "Devolper Java Senior");
+        Professor sauloDaMata = new Professor("Alexandre Sobrino", "Web Stack");
         sauloDaMata.adicionarCurso(curso1);
         sauloDaMata.adicionarCurso(curso2);
         sauloDaMata.exibirCursosPalestrados();
@@ -55,21 +55,21 @@ public class Main {
 
         
         System.out.println("");
-        Projeto oppProject = new Projeto();
-        oppProject.adicionarProjeto("POO Conta Banco Java", "Criando um Banco digital usando os conceitos de POO");
-        oppProject.adicionarTec("Java");
-        oppProject.adicionarTec("AWS");
-        oppProject.adicionarTec("SpringBoot");
+        Projeto CursoProject = new Projeto();
+        CursoProject.adicionarProjeto("POO Conta Banco Java", "Criando um Banco digital usando os conceitos de POO");
+        CursoProject.adicionarTec("Java");
+        CursoProject.adicionarTec("AWS");
+        CursoProject.adicionarTec("SpringBoot");
 
-        oppProject.adicionarMembros(devCamila);
-        oppProject.adicionarMembros(devCamila);
-        oppProject.adicionarMembros(devCamila);
-        System.out.println("Quantidade de Membros: "+oppProject.obterNumeroMembros());
-        oppProject.obterTecnologiasUtilizadas();
-        oppProject.removeTec("Java");
-        oppProject.obterTecnologiasUtilizadas();
-        oppProject.removerMembros(devCamila);
-        System.out.println("Quantidade de Membros: "+oppProject.obterNumeroMembros());
+        CursoProject.adicionarMembros(devCamila);
+        CursoProject.adicionarMembros(devCamila);
+        CursoProject.adicionarMembros(devCamila);
+        System.out.println("Quantidade de Membros: "+ CursoProject.obterNumeroMembros());
+        CursoProject.obterTecnologiasUtilizadas();
+        CursoProject.removeTec("Java");
+        CursoProject.obterTecnologiasUtilizadas();
+        CursoProject.removerMembros(devCamila);
+        System.out.println("Quantidade de Membros: "+ CursoProject.obterNumeroMembros());
 
     }
 }
